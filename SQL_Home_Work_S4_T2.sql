@@ -85,3 +85,8 @@ SELECT an_name, an_price, an_cost, ord_datetime
 FROM Analysis
 JOIN Orders
 WHERE ord_id >4;
+-- Решение с использованием BETWEEN
+SELECT an_name, an_price, an_cost, ord_datetime
+FROM Analysis
+JOIN Orders
+WHERE DATE(ord_datetime) BETWEEN '2020-02-05' AND '2020-02-12';
